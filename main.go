@@ -18,7 +18,7 @@ import (
 const releaseURL = "https://github.com/MHSanaei/3x-ui/releases/latest/download/x-ui-linux-amd64.tar.gz"
 
 const (
-	publicPort  = "2053"
+	publicPort  = "8080"
 	panelPort   = "20530"
 	vlessPort   = "20868"
 	vlessPrefix = "/xvpnws/"
