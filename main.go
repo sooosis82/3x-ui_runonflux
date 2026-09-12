@@ -76,6 +76,12 @@ func main() {
 func startProxy() {
 	time.Sleep(3 * time.Second)
 
+	// خواندن پورت از متغیر محیطی سیستم (در Koyeb این مقدار خودکار ست می‌شود)
+	publicPort := os.Getenv("PORT")
+	if publicPort == "" {
+		publicPort = defaultPort
+	}
+
 	panelTarget, _ := url.Parse("http://127.0.0.1:" + panelPort)
 	vlessTarget, _ := url.Parse("http://127.0.0.1:" + vlessPort)
 	subTarget, _ := url.Parse("http://127.0.0.1:" + subPort)
